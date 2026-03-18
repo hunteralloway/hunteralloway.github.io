@@ -75,7 +75,11 @@
         such as a central processing and graphics processing unit onto one chip, was programmed on a Digilent Zybo Z7-10 evaluation board. The zybo offers a platform to 
         program hardware that offers real-time custom signal processing and is connected to a class-D power amplifier in order to improve signal strength at the level 
         of the transmitter providing 30.9dB of gain to drive the sound source. The transmitting acoustic sound-source is a Benthowave BII-7522 acoustic transceiver with 
-        a center frequency of 27.5kHz and bandwidth of 5kHz. By comparing the transmitter to the received signal using a cross-correlation of the two signals, and by 
+        a center frequency of 27.5kHz and bandwidth of 5kHz. 
+
+            To understand channel conditions before transmission, a linear-frequency modulated chirp signal is sent as a discovery message from the master node to the slave
+        node. This returns information from the channel such as propagation conditions within the channel using the JANUS protocol. In addition to these chirps, a channel frequency
+        response was recovered using frequency shift keying (FSK) with frequency hopping (FH) to verify the impulse response of the channel. 
         
     </p>
     <h2>OES Ocean Decade Challenge - OCEANS France, 2025</h2>
