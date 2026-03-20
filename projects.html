@@ -35,14 +35,13 @@
 
 <div class="content">
     <h1>Projects</h1>
-    <p>Hey there! Welcome to my projects page, where I share some of my favourite projects and inventions I've had the privaledge of developing.</p>
+    <p>Hey there! Welcome to my projects page, where I share some of my favourite projects and inventions over the years.</p>
 
     <h2>Flight Squad Media</h2>
     <p style="text-align: justify;">
-        A photography and cinematography media production company developed with the intention to combine engineering with a passion for film. Flight Squad Media was 
-        created by a group of university engineering students who enjoy tinkering, flying, and filming with drones. Drone cinematography was just taking flight, no
-        pun intended, and what started out as a hobby quickly evolved into a buisness. Flight Squad Media, commonly referred to as "FSM", was the brain-child of founder Ryan Tam, 
-        former aerospace engineer at Safran Aerospace Company and current CEO at Aerlift. The goal of FSM was simply to combine and address two needs: 
+        A photography and cinematography media production company developed by a group of engineering undergraduate students, who enjoy engineering, flying and filming with drones. 
+        Back in 2017, drone cinematography was just taking flight, no pun intended, and what started out as a hobby quickly evolved into a buisness. Flight Squad Media, commonly referred 
+        to as "FSM", was the brain-child of founder Ryan Tam, former aerospace engineer at Safran Aerospace and current CEO at Aerlift, Canada. The goal of FSM was simply to:
         <br> 
         <ul>
       <li>Provide Easily Accessible Low-Cost Aerial Imaging</li>
@@ -50,11 +49,11 @@
          </ul>
         <p style="text-align: justify;">
             With the help of my brother Baron Alloway, Broker of Record at Alloway Property Group and Biomedical Engineering graduate from the University of Miami, our media production
-            company addressed the problem of aerial imagery at an affordable price. This had a postivie effect on boosting add-space for property listings and provided the buyer
+            company addressed the problem of aerial imagery at an affordable price. This had a postivie effect on boosting add-space for property listings and provided buyers
             with an idea as to the scale of the properties they were purchasing.<br>
-            In addition to real-estate, FSM promoted many engineering related non-profit organizations such as FIRST Robotics Canada, and VEX Robotics Canada. In addition to 
+            In addition to real-estate, FSM promoted engineering related non-profit organizations such as FIRST Robotics and VEX Robotics, Canada. In addition to 
             providing free promotional aerial cinematographic material to these organizations, FSM inspired young minds to engage in STEM (Science Technology Engineering Math) 
-            related education and carrers. <br>
+            related education and carrer pathways. <br>
             <br>
             While FSM is no longer a registered corporation, this small team of engineers taught me the importance that it's now what you know, but how you use it to help others.  
         </p>
@@ -64,7 +63,7 @@
     <p style="text-align: justify;">
         Oh, this is one of my favourite projects and one of the first times I was introduced to acoustics. So what is an "adaptive embedded system", and how is 
         it used?
-        Well, in the context of underwater communications (my favourite field), we need to address three major challenges when transmitting and receiving acoustic data:
+        Simply put, and in the context of underwater communications (my favourite field), we need to address three major challenges when transmitting and receiving data underwater:
         <ul>
             <li>Slow Sound-Speed</li>
             <li>Attenuation with Inceasing Frequency</li>
@@ -72,25 +71,32 @@
         </ul>
 
         To account for these variables and maintain reliable communication in a time-invariant underwater channel, a System-on-Chip (SoC) that combines components 
-        such as a central processing and graphics processing unit onto one chip, was programmed on a Digilent Zybo Z7-10 evaluation board. The zybo offers a platform to 
-        program hardware that offers real-time custom signal processing and is connected to a class-D power amplifier in order to improve signal strength at the level 
-        of the transmitter providing 30.9dB of gain to drive the sound source. The transmitting acoustic sound-source is a Benthowave BII-7522 acoustic transceiver with 
-        a center frequency of 27.5kHz and bandwidth of 5kHz. 
+        such as a central processing and graphics processing unit onto one chip, was programmed on a Digilent Zybo Z7-10 evaluation board, to maintain low-cost. and 
+        modularity all on a single platform. The zybo evluation board offers a platform to program hardware with real-time signal processing, and can be connected 
+        to a power amplifier in order to improve signal strength at the level of the transmitter. The transmitting acoustic sound-source we used for this project
+        was a Benthowave BII-7522 acoustic transceiver, having center frequency of 27.5kHz and bandwidth of 5kHz. 
 
-            To understand channel conditions before transmission, a linear-frequency modulated chirp signal is sent as a discovery message from the master node to the slave
-        node. This returns information from the channel such as propagation conditions within the channel using the JANUS protocol. In addition to these chirps, a channel frequency
-        response was recovered using frequency shift keying (FSK) with frequency hopping (FH) to verify the impulse response of the channel. Thirteen subbands with twenty-six matched
-        filters were used accordingly to maximize SNR at the receiver. 
-            The images below are from the initial sea-trial of the adaptive transceiver, whereby we placed the sound source and recorder at a distance of three-meters apart at a depth
-        of five meters. The source transmitted on an FPGA board, produced 100 periods of a sinewave chirp signal from 20-45kHz at increments of 500Hz. The transmit-voltage response curve
-        was evaluated by measuring the sopund pressure level at the receiver offset by the path loss, and validated the manufacturers carrier frequency of 27.5kHz. 
+            It is very difficult to account for known variables in an acoustic channel, due to ambient (the drone of an engine) and site-specific (snapping shrimp) noise. 
+            To understand channel conditions before transmission, a linear-frequency modulated chirp signal was sent using this platform, as a discovery message from the 
+            master node to the slave node. This returns information from the channel such as propagation conditions within the channel using the JANUS protocol. In addition 
+            to these exploratory chirp signals, a channel frequency response was recovered using frequency shift keying (FSK) with frequency hopping (FH), to verify the impulse 
+            response of the channel. Thirteen subbands with twenty-six matched filters were used accordingly to maximize SNR at the receiver. 
+            <br>
+            The images below are from an initial sea-trial in the Bedford Basin in Halifax, Nova Scotia. During this sea-trial, the group at UWSTREAM fascilliated PhD candidate Boris Nges, 
+            with testing the adaptive transceiver range and channel estimation capabilities, by placing the sound source and recorder at a distance of three-meters apart at a depth
+            of five meters. The source transmitted on an FPGA board, produced 100 periods of a sinewave chirp signal from 20-45kHz at increments of 500Hz. The transmit-voltage response curve
+            was evaluated by measuring the sound pressure level at the receiver, offset by the path loss, and validated the manufacturers carrier frequency of 27.5kHz. 
             My contribuitions to the project are as follows: 
      <ul>
       <li>Sourcing of Parts for the Transmitter & Receiver Enclosures</li>
       <li>Recording Measurements of Signal Strength Between the Transmitter and Receiver</li>
-      <li>Validating Transmit-Voltage Response Curve for the Transceiver</li>
+      <li>Establishing Measured Distance of Three-Meters by Anchoring Moorings</li>
+      <li>Visually Validating Transmit-Voltage Response Resonance Frequency During Sea-Trial</li>
+      <li>Preparation of Sea-Trial Documents</li>
     </ul>
-        
+        <br>
+        This experience taught me the importance of preparation and the ability to adapt to unexpected challenges. We learned that the expectation of a deployment is often met with unexpected challenges
+        that would seem trivial at first (such as alignment between the transmitter and receiver) but in reality, proved challenging and posed a significant challenge to validating frequency response characteristics.
     </p>
     <img src="images/sea_trial_1.png" alt="sea_trial" width="400">
     <img src="images/sea_trial_2.png" alt="sea_trial" width="400">
