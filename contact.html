@@ -8,14 +8,33 @@
             font-family: Arial;
             display: flex;
         }
+
+        /* Sidebar */
         .sidebar {
             width: 200px;
-            height: 100vh;
+            height: 200vh;
             background-color: #393737;
             padding: 20px;
         }
+
+        .sidebar ul {
+            list-style-type: disc; /* bullet points */
+            padding-left: 20px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .sidebar a:hover {
+            color: blue;
+        }
+
+        /* Main content */
         .content {
             padding: 20px;
+            flex: 1;
         }
     </style>
 </head>
@@ -34,7 +53,7 @@
     </h1>
     <h2>Email:</h2> <p>hunteralloway@ieee.org</p><br>
     <h2>Linkedin:</h2> <p>www.linkedin.com/in/hunteralloway</p><br>
-    <h2>Location: </h2> <p>Liberty University </p><br>
+    <h2>Location: </h2> <p>Liberty University</p><br>
 </div>
 </html>
 </body>
