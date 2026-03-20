@@ -8,14 +8,33 @@
             font-family: Arial;
             display: flex;
         }
+
+        /* Sidebar */
         .sidebar {
             width: 200px;
             height: 100vh;
             background-color: #393737;
             padding: 20px;
         }
+
+        .sidebar ul {
+            list-style-type: disc; /* bullet points */
+            padding-left: 20px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sidebar a:hover {
+            color: blue;
+        }
+
+        /* Main content */
         .content {
             padding: 20px;
+            flex: 1;
         }
     </style>
 </head>
