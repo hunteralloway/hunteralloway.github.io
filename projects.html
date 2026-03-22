@@ -3,12 +3,23 @@
 <head>
     <title>Projects</title>
     <style>
+        
         body {
             margin: 0;
             font-family: Arial;
             display: flex;
         }
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
+        .image-grid img {
+            width: 300px;      /* same width */
+            height: 200px;     /* same height */
+            object-fit: cover; /* crops instead of stretching */
+        }
         /* Sidebar */
         .sidebar {
             width: 200px;
@@ -35,6 +46,7 @@
         .content {
             padding: 20px;
             flex: 1;
+            
         }
     </style>
 </head>
@@ -143,12 +155,16 @@
         This experience taught me the importance of preparation and the ability to adapt to unexpected challenges. We learned that the expectation of a deployment is often met with unexpected challenges
         that would seem trivial at first (such as alignment between the transmitter and receiver) but in reality, proved challenging and posed a significant challenge to validating frequency response characteristics.
     </p>
-    <img src="images/sea_trial_1.png" alt="sea_trial" width="400">
-    <img src="images/sea_trial_2.png" alt="sea_trial" width="400">
-    <img src="images/sea_trial_3.png" alt="sea_trial" width="400">
-    <img src="images/sea_trial_4.png" alt="sea_trial" width="400">
-    <img src="images/sea_trial_5.png" alt="sea_trial" width="400">
-    <img src="images/sea_trial_6.png" alt="sea_trial" width="400">
+    
+<div class="image-grid">
+    <img src="images/sea_trial_1.png" alt="sea_trial">
+    <img src="images/sea_trial_2.png" alt="sea_trial">
+    <img src="images/sea_trial_3.png" alt="sea_trial">
+    <img src="images/sea_trial_4.png" alt="sea_trial">
+    <img src="images/sea_trial_5.png" alt="sea_trial">
+    <img src="images/sea_trial_6.png" alt="sea_trial">
+</div>
+
     <h2>Ocean Engineering Society Ocean Decade Challenge - OCEANS France, 2025</h2>
     <p style="text-align: justify;">
         During my masters degree at Dalhousie University, I had an incredible opportunity to lead a team of graduate and undergraduate research students in developing an underwater
